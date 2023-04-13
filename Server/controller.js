@@ -1,15 +1,15 @@
-let templates = require('./db.json')
+let actor = require('./db.json')
 
 module.exports = {
-    getTemplate: (req, res) => {
+    getActor: (req, res) => {
 
         res.status(200).send(something)
     },
 
-    editTemplate: (req, res) => {
+    addActor: (req, res) => {
 
         res.status(200).send(something)
     }
 }
 
-//this is where you'll create GET ect functionality
+//this is where you'll create GET functionality

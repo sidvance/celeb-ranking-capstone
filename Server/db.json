@@ -1,1 +1,124 @@
 
+[
+    {
+    "name": "Christian Bale",
+    "id": 1,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": ""
+    },
+
+    {
+    "name": "Ryan Reynolds",
+    "id": 2,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Ryan Gosling",
+    "id": 3,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Nicholas Cage",
+    "id": 4,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Jack Black",
+    "id": 5,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Keanu Reeves",
+    "id": 6,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Danny Devito",
+    "id": 7,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Christian Bale",
+    "id": 8,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Matt Damon",
+    "id": 9,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Meryl Streep",
+    "id": 10,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false,
+    "imageURL": "" 
+    },
+
+    {
+    "name": "Tom Hanks",
+    "id": 11,
+    "nominations": 196,
+    "awards": 76,
+    "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
+    "attractive": true,
+    "wouldHang": false, 
+    "imageURL": ""
+    }
+
+]
