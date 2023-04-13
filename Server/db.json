@@ -18,7 +18,7 @@
     "awards": 76,
     "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
     "attractive": true,
-    "wouldHang": false,
+    "wouldHang": true,
     "imageURL": "" 
     },
 
@@ -40,7 +40,7 @@
     "awards": 76,
     "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
     "attractive": true,
-    "wouldHang": false,
+    "wouldHang": true,
     "imageURL": "" 
     },
 
@@ -51,7 +51,7 @@
     "awards": 76,
     "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
     "attractive": true,
-    "wouldHang": false,
+    "wouldHang": true,
     "imageURL": "" 
     },
 
@@ -62,7 +62,7 @@
     "awards": 76,
     "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
     "attractive": true,
-    "wouldHang": false,
+    "wouldHang": true,
     "imageURL": "" 
     },
 
@@ -117,7 +117,7 @@
     "awards": 76,
     "genres": ["historical", "musical", "book adaption", "action", "horror", "comedy", "political", "romance", "religious", "voice actor for video game"],
     "attractive": true,
-    "wouldHang": false, 
+    "wouldHang": true, 
     "imageURL": ""
     }
 
