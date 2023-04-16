@@ -1,0 +1,25 @@
+
+
+.hide {
+    display: none;
+}
+
+#actorForm{
+    background-color: aquamarine;
+}
+
+#sidePanel {
+box-sizing: border-box;
+
+position: absolute;
+background-color: blueviolet;
+width: 112px;
+height: 262px;
+left: 529px;
+top: 36px;
+
+}
+
+#actorContainer {
+    background-color: blue;
+}

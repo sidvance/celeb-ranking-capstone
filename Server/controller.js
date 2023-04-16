@@ -5,7 +5,7 @@ let choices = [];
 
 module.exports = {
     getRandomActor: (req, res) => {
-
+        
         //get a random index for object in actor array
         let index = Math.floor(Math.random() * actors.length)
         //get the object for that index
@@ -13,11 +13,11 @@ module.exports = {
         //send actor to front end
         res.status(200).send(actor)
     },
-
+    
     getAllActors: (req, res) => {
         res.status(200).send(actors)
     },
-
+    
     addActor: (req, res) => {
         //destructuring key value pairs from actors array
         const {name, nominations, awards, genres, attractive, wouldHang, imageURL} = req.body
@@ -32,14 +32,14 @@ module.exports = {
             imageURL,
             id: globalID
         }
-
+        
         //add new actor to actors array
         actors.push(newActor)
         globalID++;
         //send the appended actors array to the front
         res.status(200).send(actors)
     },
-
+    
     deleteActor: (req, res) => {
         //???????????????????????????????????????
         const {id} = req.params
@@ -47,15 +47,36 @@ module.exports = {
         actors.splice(i, 1)
         res.status(200).send(actors)
     },
-
+    
     chooseActor: (req, res) => {
         if (UserActor.length === 1){
             return alert("You can only choose one actor!")
         }
         //find the index of the 
         let index = choices.findIndex
-
         res.status(200).send(SOMETHING)
+    },
+    
+    createActorCard: (req, res, actor) => {   
+        const actorContainer = document.querySelector('#actorContainer')
+        const actorCard = document.createElement('div')
+        actorCard.classList.add('actor-card')
+        
+        actorCard.innerHTML = 
+        `<img alt='actor cover image' src=${actor.imageURL} class="actor-cover-image"/>
+        <p class="actorName">${actor.name}</p>
+        <div class="nomsContainer">
+        <p class="noms">Nominations: ${actor.nominations}</p>
+        <p class="awards">Awards: ${actor.awards}</p>
+        </div>
+        <p class="wouldHang">Would you want to hang out with them in real life? ${actor.wouldHang}</p>
+        <div class="btns-container">
+        <button id="deleteBtn" onclick="deleteActor(${actor.id})">Delete</button>
+        <button id="chooseBtn" onclick="chooseActor(${actor.id})">Choose actor</button>
+        </div>
+        `
+    
+        actorContainer.appendChild(actorCard)
     }
 }
 

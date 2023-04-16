@@ -6,8 +6,9 @@ const baseURL = 'http://localhost:4646'
 
 let chooseBtn = document.querySelector('#chooseBtn')
 let randomBtn = document.querySelector('#randomBtn')
-let addBtn = document.querySelector('#addBtn')
-let mainSection = document.querySelector('#mainSection')
+let submitBtn = document.querySelector('#submitBtn')
+// let deleteBtn = document.querySelector('#deleteBtn')
+// let actorContainer = document.querySelector('#actorContainer')
 
 
 const getAllActors = () => {
@@ -30,18 +31,22 @@ const getRandomActor = () => {
     })
 }
 
-const addActor = () => {
+const addActor = (e) => {
+    e.preventDefault()
+
     axios.post(`${baseURL}/allActors`)
     .then((res) => {
         console.log(res.data)
-        //loop over res.data and create input fields for each property
-        // for(let i = 0; i < res.data.length; i++){
-        //     let pTag = document.createElement('p')
-        //     pTag.innerHTML = `
-        //         ${res.data[i]}: <input type="text">
-        //     `
-        //     mainSection.appendChild(pTag)
-        // }
+    })
+    .catch((theseHands) => {
+        console.log(theseHands)
+    })
+}
+
+const deleteActor = ()  => {
+    axios.delete(`${baseURL}/allActors`)
+    .then((res) => {
+        console.log(res.data)
     })
     .catch((theseHands) => {
         console.log(theseHands)
@@ -51,4 +56,7 @@ const addActor = () => {
 
 chooseBtn.addEventListener('click', getAllActors)
 randomBtn.addEventListener('click', getRandomActor)
-addBtn.addEventListener('click', addActor)
+submitBtn.addEventListener('click', addActor)
+// deleteBtn.addEventListener('click', deleteActor)
+
+
