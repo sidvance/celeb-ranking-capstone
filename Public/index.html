@@ -13,56 +13,74 @@
         <h1>Who Deserves the Title?</h1>
     </header>
 
-    <section id="actorBtns">
-        <button id="chooseBtn" class="actorBtn" onclick="toggleForm()">Choose An Actor</button>
-        <button id="randomBtn" class="actorBtn">Random Actor</button>
-        <button id="addBtn" class="actorBtn" onclick="toggleForm()">Add An Actor</button>
-    </section>
+    <section class="m-auto" id="mainSection">
 
-    <form id="actorForm" class="hide">
-        <input 
-            type='text'
-            id="name"
-            placeholder="Name"/>
-        <input 
-            type='text'
-            id="nom"
-            placeholder='# of nominations'/>
-        <input 
-            type='text'
-            id="awards"
-            placeholder='# of awards recieved'/>
-        <input 
-            type='text'
-            id="genres"
-            placeholder="# of genres"/>
-        <div class="form-check">
-            <p>Would you hang with them in real life?</p>
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-                Yes
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-                No
-            </label>
+        <section id="actorBtns" >
+            <button id="chooseBtn" class="btn btn-primary" onclick="toggleForm('#actorContainer')">Choose An Actor</button>
+            <button id="randomBtn" class="btn btn-primary">Random Actor</button>
+            <button id="addBtn" class="btn btn-primary" onclick="toggleForm('#actorForm')">Add An Actor</button>
+        </section>
+
+        <form id="actorForm" class="hide">
+            <input 
+                type='text'
+                id="name"
+                placeholder="Name"/>
+            <input 
+                type='text'
+                id="nom"
+                placeholder='# of nominations'/>
+            <input 
+                type='text'
+                id="awards"
+                placeholder='# of awards recieved'/>
+            <input 
+                type='text'
+                id="genres"
+                placeholder="# of genres"/>
+            <div class="form-check">
+                <p>Would you hang with them in real life?</p>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Yes
+                </label>
             </div>
-        <input 
-            type='text'
-            id="img"
-            placeholder='Paste an image URL'/>
-            <button id="submitBtn">Submit</button>
-    </form>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    No
+                </label>
+                </div>
+            <input 
+                type='text'
+                id="img"
+                placeholder='Paste an image URL'/>
+                <button id="submitBtn">Submit</button>
+        </form>
 
-    <section id="actorContainer" class="hide"></section>
+        <section id="actorContainer" class="hide">
+            <!-- <div id="actorCard">
+                <img alt='actor cover image' src=${actor.imageURL} class="actor-cover-image"/>
+                <p class="actorName">`${actor.name}`</p>
+                <div class="nomsContainer">
+                    <p class="noms">Nominations: ${actor.nominations}</p>
+                    <p class="awards">Awards: ${actor.awards}</p>
+                </div>
+                <p class="wouldHang">Would you want to hang out with them in real life? ${actor.wouldHang}</p>
+                <div class="btns-container">
+                    <button id="deleteBtn" class="btn btn-primary" onclick="deleteActor(`${actor.id}`)">Delete</button>
+                    <button id="chooseBtn" class="btn btn-primary" onclick="chooseActor(`${actor.id}`)">Choose actor</button>
+                </div>
+            </div> -->
+        </section>
 
-    <div id="sidePanel">SIDE PANEL</div>
+        <div id="sidePanel">SIDE PANEL</div>
+
+    </section>
     
     <script>
-        function toggleForm(){
-          const form = document.querySelector('#actorForm');
+        function toggleForm(id){
+          const form = document.querySelector(id);
         //   const container = document.querySelector('#actorContainer');
           form.classList.toggle('hide');
         //   container.classList.toggle('hide')

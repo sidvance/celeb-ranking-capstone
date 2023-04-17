@@ -33,7 +33,7 @@
     "nominations": 106,
     "awards": 76,
     "wouldHang": true,
-    "imageURL": "" 
+    "imageURL": "https://c4.wallpaperflare.com/wallpaper/474/300/880/nicolas-cage-actor-face-look-wallpaper-preview.jpg" 
     },
 
     {
@@ -82,21 +82,21 @@
     },
 
     {
-        "name": "Harry Styles",
-        "id": 11,
-        "nominations": 1,
-        "awards": 1,
-        "wouldHang": true, 
-        "imageURL": ""
+    "name": "Harry Styles",
+    "id": 11,
+    "nominations": 1,
+    "awards": 1,
+    "wouldHang": true, 
+    "imageURL": "https://hips.hearstapps.com/hmg-prod/images/pchelenepambrun-resized-1576190436.jpg?crop=1xw:0.5001xh;center,top&resize=1200:*"
     },
     
     {
-        "name": "Chris Evans",
-        "id": 12,
-        "nominations": 44,
-        "awards": 7,
-        "wouldHang": true,
-        "imageURL": "https://www.theatricalindex.com/media/cimage/persons/chris-evans/headshot_headshot.jpg"
+    "name": "Chris Evans",
+    "id": 12,
+    "nominations": 44,
+    "awards": 7,
+    "wouldHang": true,
+    "imageURL": "https://www.theatricalindex.com/media/cimage/persons/chris-evans/headshot_headshot.jpg"
     },
     
     {

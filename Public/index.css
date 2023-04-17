@@ -4,6 +4,20 @@
     display: none;
 }
 
+header {
+    text-align: center;
+}
+
+#mainSection {
+    display: flex;
+
+    padding: 50px;
+    height: 500px;
+    width: 650px;
+
+    background-color: greenyellow;
+}
+
 #actorForm{
     background-color: aquamarine;
 }
@@ -21,5 +35,70 @@ top: 36px;
 }
 
 #actorContainer {
-    background-color: blue;
+    /* width: 112px;
+    height: 262px; */
+    padding: 25px;
+
+    background-color: whitesmoke;
+}
+
+.actor-card {
+    background-color: turquoise;
+    width: 300px;
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 12px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.btns-container {
+    width: 100%; 
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+
+.nomsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.btns-container > button {
+  padding: 2px 10px;
+  background-color: orange;
+  border-color: orange;
+  
+}
+
+#actorBtns {
+    display: flex;
+    border-color: black;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 200px;
+    
+}
+
+#actorBtns > button {
+    background-color: palevioletred;
+    padding: 5px;
+    height: 55px;
+    width: 85px;
+    text-align: center;
+    /* margin: auto; */
+}
+
+.actor-card {
+    width: 150px;
+
+}
+
+.actor-card-img {
+    max-width: fit-content;
+
 }

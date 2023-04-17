@@ -20,14 +20,12 @@ module.exports = {
     
     addActor: (req, res) => {
         //destructuring key value pairs from actors array
-        const {name, nominations, awards, genres, attractive, wouldHang, imageURL} = req.body
+        const {name, nominations, awards, wouldHang, imageURL} = req.body
         //creat new obj as template for new actor in array
         let newActor = {
             name,
             nominations,
             awards,
-            genres,
-            attractive,
             wouldHang,
             imageURL,
             id: globalID
@@ -42,6 +40,7 @@ module.exports = {
     
     deleteActor: (req, res) => {
         //???????????????????????????????????????
+        // console.log('deleted!!')
         const {id} = req.params
         let i = actors.findIndex((elem) => elem.id === +id)
         actors.splice(i, 1)
@@ -55,28 +54,6 @@ module.exports = {
         //find the index of the 
         let index = choices.findIndex
         res.status(200).send(SOMETHING)
-    },
-    
-    createActorCard: (req, res, actor) => {   
-        const actorContainer = document.querySelector('#actorContainer')
-        const actorCard = document.createElement('div')
-        actorCard.classList.add('actor-card')
-        
-        actorCard.innerHTML = 
-        `<img alt='actor cover image' src=${actor.imageURL} class="actor-cover-image"/>
-        <p class="actorName">${actor.name}</p>
-        <div class="nomsContainer">
-        <p class="noms">Nominations: ${actor.nominations}</p>
-        <p class="awards">Awards: ${actor.awards}</p>
-        </div>
-        <p class="wouldHang">Would you want to hang out with them in real life? ${actor.wouldHang}</p>
-        <div class="btns-container">
-        <button id="deleteBtn" onclick="deleteActor(${actor.id})">Delete</button>
-        <button id="chooseBtn" onclick="chooseActor(${actor.id})">Choose actor</button>
-        </div>
-        `
-    
-        actorContainer.appendChild(actorCard)
     }
 }
 
