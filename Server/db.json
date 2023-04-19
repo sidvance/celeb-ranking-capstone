@@ -5,7 +5,7 @@
     "id": 1,
     "nominations": 196,
     "awards": 76,
-    "wouldHang": false,
+    "wouldHang": "No",
     "imageURL": "https://i.pinimg.com/474x/37/d9/90/37d990b08854017edcebba472e6dcc58.jpg"
     },
 
@@ -14,7 +14,7 @@
     "id": 2,
     "nominations": 37,
     "awards": 12,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://www.aceshowbiz.com/images/photo/ryan_reynolds.jpg" 
     },
 
@@ -23,7 +23,7 @@
     "id": 3,
     "nominations": 105,
     "awards": 22,
-    "wouldHang": false,
+    "wouldHang": "No",
     "imageURL": "https://images.entertainment.ie/person/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg" 
     },
 
@@ -32,7 +32,7 @@
     "id": 61,
     "nominations": 106,
     "awards": 76,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://c4.wallpaperflare.com/wallpaper/474/300/880/nicolas-cage-actor-face-look-wallpaper-preview.jpg" 
     },
 
@@ -41,7 +41,7 @@
     "id": 5,
     "nominations": 96,
     "awards": 46,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://pbs.twimg.com/media/ENXrEp6XYAEmzkZ?format=jpg&name=4096x4096" 
     },
 
@@ -50,7 +50,7 @@
     "id": 6,
     "nominations": 28,
     "awards": 12,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg" 
     },
 
@@ -59,7 +59,7 @@
     "id": 7,
     "nominations": 34,
     "awards": 20,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://www.harrywalker.com/media/20653636/jordan_michaelb-official-11152021-hdsht.jpg?anchor=center&mode=crop&width=362&height=449&rnd=133172375640000000" 
     },
 
@@ -68,7 +68,7 @@
     "id": 8,
     "nominations": 94,
     "awards": 39,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://i.ebayimg.com/images/g/UnQAAOSwcB5gdZVQ/s-l500.jpg" 
     },
 
@@ -77,7 +77,7 @@
     "id": 9,
     "nominations": 86,
     "awards": 37,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://cdn.txculturaltrust.org/content/uploads/2020/04/2019-MatthewMcConaughey-honoree.jpg" 
     },
 
@@ -86,7 +86,7 @@
     "id": 11,
     "nominations": 1,
     "awards": 1,
-    "wouldHang": true, 
+    "wouldHang": "Yes", 
     "imageURL": "https://hips.hearstapps.com/hmg-prod/images/pchelenepambrun-resized-1576190436.jpg?crop=1xw:0.5001xh;center,top&resize=1200:*"
     },
     
@@ -95,7 +95,7 @@
     "id": 12,
     "nominations": 44,
     "awards": 7,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://www.theatricalindex.com/media/cimage/persons/chris-evans/headshot_headshot.jpg"
     },
     
@@ -104,7 +104,7 @@
     "id": 10,
     "nominations": 75,
     "awards": 14,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://i.pinimg.com/originals/63/0c/2a/630c2a1e9092f939a39e0ee5da7d4dce.jpg" 
     },
     
@@ -113,7 +113,7 @@
     "id": 13,
     "nominations": 76,
     "awards": 32,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://pbs.twimg.com/media/E7GS2xQX0AAwgWk.jpg" 
     },
     
@@ -122,7 +122,7 @@
     "id": 14,
     "nominations": 133,
     "awards": 68,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/methode/2020/01/24/1c535fd0-3d00-11ea-a16e-39b824591591_image_hires_142532.jpg?itok=aJiQOUZ2&v=1579847137" 
     },
     
@@ -131,7 +131,7 @@
     "id": 15,
     "nominations": 93,
     "awards": 36,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://assets-global.website-files.com/5db63dc519de55e028ef4816/61153b2c93e1fb25c773f833_Zendaya%20(1).jpg" 
     },
     
@@ -140,7 +140,7 @@
     "id": 16,
     "nominations": 159,
     "awards": 52,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://c4.wallpaperflare.com/wallpaper/698/384/930/actresses-michelle-williams-actress-blonde-wallpaper-preview.jpg" 
     },
     
@@ -149,7 +149,7 @@
     "id": 17,
     "nominations": 18,
     "awards": 9,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://i.pinimg.com/736x/58/70/9b/58709b6456623f2f66703585703f9c23.jpg" 
     },
     
@@ -158,7 +158,7 @@
     "id": 18,
     "nominations": 33,
     "awards": 6,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://variety.com/wp-content/uploads/2018/04/emily-blunt-16x9.jpg" 
     },
     
@@ -167,7 +167,7 @@
     "id": 19,
     "nominations": 20,
     "awards": 10,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://deadline.com/wp-content/uploads/2021/03/thumbnail_Emma-Corrin-DAVID-SIMON-DAYAN_-002.jpg" 
     },
     
@@ -176,7 +176,7 @@
     "id": 20,
     "nominations": 101,
     "awards": 40,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://i.pinimg.com/originals/ec/7b/07/ec7b07754460988e79c99e06be9b6fc2.jpg" 
     },
     
@@ -185,7 +185,7 @@
     "id": 21,
     "nominations": 76,
     "awards": 39,
-    "wouldHang": true,
+    "wouldHang": "Yes",
     "imageURL": "https://i.pinimg.com/736x/50/3b/40/503b40d7c2849a4762c64efa2d110312--octavia-spencer-fontana.jpg" 
     }
 

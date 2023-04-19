@@ -1,15 +1,17 @@
-//axios endpoint requests and response handling. Listening for requests sent from backend
-
 const baseURL = 'http://localhost:4646'
 
-//Interactive js. Grab html element. Write fn. Add event listener.
-
 let chooseBtn = document.querySelector('#chooseBtn')
+chooseBtn.elementToShow = ('actorContainer')
 let randomBtn = document.querySelector('#randomBtn')
+randomBtn.elementToShow = ('actorContainer')
 let submitBtn = document.querySelector('#submitBtn')
+submitBtn.elementToShow = ('actorContainer')
 let deleteBtn = document.querySelector('#deleteBtn')
-// let actorContainer = document.querySelector('#actorContainer')
+let addBtn = document.querySelector('#addBtn')
+addBtn.elementToShow = ('actorForm')
 
+const winnerDisplay = document.querySelector('#winnerDisplay')
+const actorContainer = document.querySelector('#actorContainer')
 
 const getAllActors = () => {
     axios.get(`${baseURL}/allActors`)
@@ -25,6 +27,7 @@ const getAllActors = () => {
 const getRandomActor = () => {
     axios.get(`${baseURL}/actor`)
     .then((res) => {
+        document.getElementById(res.data.name).classList.remove('hide')
         console.log(res.data)
     })
     .catch((theseHands) => {
@@ -34,21 +37,30 @@ const getRandomActor = () => {
 
 const addActor = (e) => {
     e.preventDefault()
+   const radio = document.querySelector('input[name="flexRadioDefault"]:checked').id
 
-    axios.post(`${baseURL}/allActors`)
+    const obj = {
+        name: document.querySelector('#name').value,
+        nominations: document.querySelector('#nom').value,
+        awards: document.querySelector('#awards').value,
+        wouldHang: document.querySelector(`label[for=${radio}]`).textContent.trim(),
+        imageURL: document.querySelector('#img').value
+    }
+
+    axios.post(`${baseURL}/allActors`, obj)
     .then((res) => {
         console.log(res.data)
+        displayActors(res.data)
     })
     .catch((theseHands) => {
         console.log(theseHands)
     })
 }
 
-const deleteActor = ()  => {
-    console.log('deleting!!!')
-    axios.delete(`${baseURL}/allActors`)
+const deleteActor = id => {
+    axios.delete(`${baseURL}/allActors/${id}`)
     .then((res) => {
-        console.log(res.data)
+        displayActors(res.data)
     })
     .catch((theseHands) => {
         console.log(theseHands)
@@ -59,6 +71,7 @@ const createActorCard = actor => {
     const actorContainer = document.querySelector('#actorContainer')
     const actorCard = document.createElement('div')
     actorCard.classList.add('actor-card')
+    actorCard.id = (actor.name)
     
     actorCard.innerHTML = 
     `<img alt='actor cover image' src=${actor.imageURL} class="img-fluid actor-card-img"/>
@@ -70,14 +83,30 @@ const createActorCard = actor => {
     <p class="wouldHang">Would you want to hang out with them in real life? ${actor.wouldHang}</p>
     <div class="btns-container">
         <button id="deleteBtn" class="btn btn-primary" onclick="deleteActor(${actor.id})">Delete</button>
-        <button id="chooseBtn" class="btn btn-primary" onclick="chooseActor(${actor.id})">Choose actor</button>
+        <button class="btn btn-primary chooseActorBtn" onclick="displayWinner()">Choose actor</button>
     </div>
     `
 
     actorContainer.appendChild(actorCard)
 }
 
-const displayActors = (arr=[]) => {
+const chooseActor = () => {
+    
+    axios.get(`${baseURL}/winner`)
+    .then((res) => {
+        const winnerPTag = document.querySelector('#winnerPTag')
+        winnerDisplay.classList.remove('hide')
+        actorContainer.classList.add('hide')
+        winnerPTag.innerHTML = res.data
+    })
+    .catch((theseHands) => {
+        console.log('CATCH')
+        console.log(theseHands)
+    })
+}
+
+const displayActors = (arr) => {
+    console.log('displaying actors')
     console.log('data arr', arr)
     actorContainer.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
@@ -85,15 +114,61 @@ const displayActors = (arr=[]) => {
     }
 }
 
-function pageSetup() {
-    getAllActors()
+const hideElements = (className) =>  {
+    const hideable = document.querySelectorAll(className)
+    for (i = 0; i < hideable.length; i++){
+        if (!hideable[i].classList.contains('hide')){
+            hideable[i].classList.add('hide')
+        }
+    }    
 }
 
+function toggleForm(id){
+    const form = document.querySelector(`#${id}`);
+    form.classList.toggle('hide');
+}
 
-// chooseBtn.addEventListener('click', getAllActors)
-randomBtn.addEventListener('click', getRandomActor)
-submitBtn.addEventListener('click', addActor)
-// deleteBtn.addEventListener('click', deleteActor)
+const displayOne = (e) => {
+    const displayingElement = e.target.elementToShow
+    hideElements('.hideable')
+    toggleForm(displayingElement)
+    
+}
+
+const displayRandomActor = (e) => {
+    console.log('displaying rando')
+    displayOne(e)
+    hideElements('.actor-card')
+}
+
+const displayNewList = (e) => {
+    console.log('new list fn')
+    displayOne(e)
+    addActor(e)   
+}
+
+function pageSetup() {
+    console.log('setting up')
+    getAllActors()
+    let chooseActorBtn = document.querySelectorAll('.chooseActorBtn')
+    console.log(chooseActorBtn)
+    for (i = 0; i < chooseActorBtn.length; i++){
+        chooseActorBtn[i].addEventListener('click', displayOne)
+    }
+}
+
+const displayWinner = () => {
+    chooseActor()
+}
+
 pageSetup()
+
+randomBtn.addEventListener('click', getRandomActor)
+submitBtn.addEventListener('click', displayNewList)
+addBtn.addEventListener('click', displayOne)
+chooseBtn.addEventListener('click', displayOne)
+randomBtn.addEventListener('click', displayRandomActor)
+
+
 
 

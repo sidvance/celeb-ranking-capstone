@@ -1,45 +1,125 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 
 
 .hide {
-    display: none;
+    display: none!important;
+}
+
+body {
+    width: 100vw;
+    background-image: url("https://scontent.flas1-1.fna.fbcdn.net/v/t39.30808-6/342503228_734557198139757_6864774996733247622_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0debeb&_nc_ohc=VsgJtobmyrEAX8RWDEu&_nc_ht=scontent.flas1-1.fna&oh=00_AfDSq6TFtmB8Yah7G4-sYAhwhpaMWXpL5hgbv96H0P0i7g&oe=64450155")!important;
+    background-size: cover;
+    background-repeat: repeat;
+
 }
 
 header {
+    background-color: transparent;
+
+    color: white;
     text-align: center;
+    font-family: 'Marker Felt', fantasy;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:15px;
+    text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
 }
 
 #mainSection {
     display: flex;
+    justify-content: space-between;
 
     padding: 50px;
-    height: 500px;
-    width: 650px;
+    width: 1000px;
+    border-radius: 40px;
 
-    background-color: greenyellow;
+    background-color: white;
+}
+
+img {
+ border-radius: 50%;
 }
 
 #actorForm{
-    background-color: aquamarine;
+    background-color: #00b3ad;
+
 }
 
 #sidePanel {
-box-sizing: border-box;
+    display: flex;
+    box-sizing: border-box;
 
-position: absolute;
-background-color: blueviolet;
-width: 112px;
-height: 262px;
-left: 529px;
-top: 36px;
+    background-color: #ecde60;
+    width: 112px;
+    height: 262px;
+    left: 529px;
+    top: 36px;
+    border-radius: 10px 40px;
+    padding: 0px;
 
+    font-family: 'Marker Felt', fantasy;
+    text-align: center;
+    align-items: center;
 }
 
 #actorContainer {
-    /* width: 112px;
-    height: 262px; */
+    display: flex;
     padding: 25px;
+    width: 700px;
+    flex-wrap: wrap;
 
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .actor-card {
@@ -55,6 +135,12 @@ top: 36px;
     border-top-right-radius: 15px;
 }
 
+.nomsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .btns-container {
     width: 100%; 
   display: flex;
@@ -62,16 +148,20 @@ top: 36px;
   margin: 5px;
 }
 
-.nomsContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
 .btns-container > button {
-  padding: 2px 10px;
-  background-color: orange;
-  border-color: orange;
+    padding: 2px 10px;
+    background-color: rgb(215, 146, 16);
+    border-color: rgb(168, 109, 0);
+
+    text-align: center;
+    font-family: 'Marker Felt', fantasy;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:15px;
+    text-shadow: -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
   
 }
 
@@ -85,12 +175,23 @@ top: 36px;
 }
 
 #actorBtns > button {
-    background-color: palevioletred;
-    padding: 5px;
+    background-image: url('https://scontent.flas1-2.fna.fbcdn.net/v/t39.30808-6/341730943_988730692291098_421112120266179697_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=siC1fbaU-kcAX_IAqGU&_nc_ht=scontent.flas1-2.fna&oh=00_AfA5CuXU9D9TtwwGcW7MgU6pIo4kNGtrGYrexrJdFwsZnQ&oe=644558B3')!important;
+    background-size: cover;
+    padding: 0px;
     height: 55px;
     width: 85px;
+    border-radius: 10px 30px;
+
     text-align: center;
-    /* margin: auto; */
+    font-family: 'Marker Felt', fantasy;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:15px;
+
+    text-shadow: -1px 1px 0 #000,
+                 1px 1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px -1px 0 #000;
 }
 
 .actor-card {

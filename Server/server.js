@@ -11,12 +11,13 @@ app.use(cors())
 
 
 //REST endpoints. Destructure fc from controller. Then write actual endpoint.
-const {getRandomActor, getAllActors, addActor, deleteActor} = require('./controller')
+const {getRandomActor, getAllActors, addActor, deleteActor, chooseActor} = require('./controller')
 
 app.get('/actor', getRandomActor)
 app.get('/allActors', getAllActors)
 app.post('/allActors', addActor)
-app.delete('/allActors', deleteActor)
+app.delete('/allActors/:id', deleteActor)
+app.get('/winner', chooseActor)
 
 //Start server
 app.listen(4646, () => console.log('we\'re in business boys: 4646'))

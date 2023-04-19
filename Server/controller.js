@@ -1,7 +1,6 @@
 let actors = require('./db.json')
 let globalID = 22;
-let UserActor = [];
-let choices = [];
+let winnerArr = ['Who\'s actually surprised?', 'I\'m shocked! This is so unexpected!!!', 'He probably has a great personality, too.']
 
 module.exports = {
     getRandomActor: (req, res) => {
@@ -21,6 +20,7 @@ module.exports = {
     addActor: (req, res) => {
         //destructuring key value pairs from actors array
         const {name, nominations, awards, wouldHang, imageURL} = req.body
+        console.log(req.body)
         //creat new obj as template for new actor in array
         let newActor = {
             name,
@@ -39,8 +39,6 @@ module.exports = {
     },
     
     deleteActor: (req, res) => {
-        //???????????????????????????????????????
-        // console.log('deleted!!')
         const {id} = req.params
         let i = actors.findIndex((elem) => elem.id === +id)
         actors.splice(i, 1)
@@ -48,12 +46,11 @@ module.exports = {
     },
     
     chooseActor: (req, res) => {
-        if (UserActor.length === 1){
-            return alert("You can only choose one actor!")
-        }
-        //find the index of the 
-        let index = choices.findIndex
-        res.status(200).send(SOMETHING)
+        // for (let i = 0; i < winnerArr.length; i++)
+        // res.status(200).send(`Christian Bale won! ${winnerArr[i]}`)
+        let index = Math.floor(Math.random() * winnerArr.length) 
+        let winner = winnerArr[index]
+        res.status(200).send(`Christian Bale won! ${winner}`)
     }
 }
 

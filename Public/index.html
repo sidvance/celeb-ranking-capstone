@@ -16,12 +16,14 @@
     <section class="m-auto" id="mainSection">
 
         <section id="actorBtns" >
-            <button id="chooseBtn" class="btn btn-primary" onclick="toggleForm('#actorContainer')">Choose An Actor</button>
+            <button id="chooseBtn" class="btn btn-primary" >Choose Actor</button>
             <button id="randomBtn" class="btn btn-primary">Random Actor</button>
-            <button id="addBtn" class="btn btn-primary" onclick="toggleForm('#actorForm')">Add An Actor</button>
+            <button id="addBtn" class="btn btn-primary">Add An Actor</button>
         </section>
+        
+        <!-- <img src="https://scontent.flas1-1.fna.fbcdn.net/v/t39.30808-6/341682080_526561922791618_4144369110880226357_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=rzSl5NoghlIAX9b1e0G&_nc_ht=scontent.flas1-1.fna&oh=00_AfDUKlD199-r1OiBxvGm_3cIxJT4KxYQ8h5v4F2ZJ0SZlA&oe=6444DB93" alt="question mark"> -->
 
-        <form id="actorForm" class="hide">
+        <form id="actorForm" class="hide hideable">
             <input 
                 type='text'
                 id="name"
@@ -58,41 +60,17 @@
                 <button id="submitBtn">Submit</button>
         </form>
 
-        <section id="actorContainer" class="hide">
-            <!-- <div id="actorCard">
-                <img alt='actor cover image' src=${actor.imageURL} class="actor-cover-image"/>
-                <p class="actorName">`${actor.name}`</p>
-                <div class="nomsContainer">
-                    <p class="noms">Nominations: ${actor.nominations}</p>
-                    <p class="awards">Awards: ${actor.awards}</p>
-                </div>
-                <p class="wouldHang">Would you want to hang out with them in real life? ${actor.wouldHang}</p>
-                <div class="btns-container">
-                    <button id="deleteBtn" class="btn btn-primary" onclick="deleteActor(`${actor.id}`)">Delete</button>
-                    <button id="chooseBtn" class="btn btn-primary" onclick="chooseActor(`${actor.id}`)">Choose actor</button>
-                </div>
-            </div> -->
-        </section>
+        <section id="actorContainer" class="hide hideable"></section>
 
-        <div id="sidePanel">SIDE PANEL</div>
+        <section id="winnerDisplay" class="hide hideable">
+            <p id="winnerPTag"></p>
+            <img src="https://i.pinimg.com/474x/37/d9/90/37d990b08854017edcebba472e6dcc58.jpg" alt="greatest actor of our generation"></img>
+        </section>
+        
+        <div id="sidePanel">Choose any actor to duel Christian Bale for the title of "Greatest Actor of our Generation"</div>
 
     </section>
-    
-    <script>
-        function toggleForm(id){
-          const form = document.querySelector(id);
-        //   const container = document.querySelector('#actorContainer');
-          form.classList.toggle('hide');
-        //   container.classList.toggle('hide')
-        }
 
-        // function toggleContainer(){
-        //     console.log('YEAH BABY')
-        //     const container = document.querySelector('#actorContainer');
-        //     container.classList.toggle('hide');
-        // }
-        
-    </script>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
