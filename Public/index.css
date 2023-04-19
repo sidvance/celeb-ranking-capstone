@@ -56,8 +56,9 @@ table {
 body {
     width: 100vw;
     background-image: url("https://scontent.flas1-1.fna.fbcdn.net/v/t39.30808-6/342503228_734557198139757_6864774996733247622_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0debeb&_nc_ohc=VsgJtobmyrEAX8RWDEu&_nc_ht=scontent.flas1-1.fna&oh=00_AfDSq6TFtmB8Yah7G4-sYAhwhpaMWXpL5hgbv96H0P0i7g&oe=64450155")!important;
-    background-size: cover;
+    background-size: cover!important;
     background-repeat: repeat;
+    background-attachment: fixed;
 
 }
 
@@ -81,36 +82,83 @@ header {
     justify-content: space-between;
 
     padding: 50px;
-    width: 1000px;
+    width: 1050px;
     border-radius: 40px;
+    border-style: double;
+    border-color: whitesmoke;
+    border-width: thick;
 
     background-color: white;
 }
 
 img {
  border-radius: 50%;
+ border-style: dotted;
+ border-width: thick;
+ border-color:#fec60f;
+
 }
 
 #actorForm{
-    background-color: #00b3ad;
+    background-color:#fed053;
+    border-color: #fec60f;
+    border-style: double;
+    border-width: thick;
+    width: 50%;
+    max-width: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-around;
+    padding: 4rem 0;
+    margin: 0 auto;
+    gap: 1rem;
+}
 
+#submitBtn {
+    padding: 2px 10px;
+    background-color:#00b3ad;
+    border-color:#06928d;
+    border-radius: 10px;
+
+    text-align: center;
+    font-family: 'Marker Felt', fantasy;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:15px;
+    color: white;
+    text-shadow: -1px 1px 0 #000,
+                 1px 1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px -1px 0 #000;
 }
 
 #sidePanel {
     display: flex;
     box-sizing: border-box;
 
-    background-color: #ecde60;
-    width: 112px;
+    background-color:#09b69c;
+    border-color:#016b67;
+    border-style: double;
+    border-width: medium;
+    width: 130px;
     height: 262px;
     left: 529px;
     top: 36px;
     border-radius: 10px 40px;
     padding: 0px;
 
+    color: rgb(0, 0, 0);
     font-family: 'Marker Felt', fantasy;
     text-align: center;
     align-items: center;
+
+    text-shadow: -1px 1px 0 rgb(255, 255, 255),
+                 1px 1px 0 rgb(255, 255, 255),
+                 1px -1px 0 rgb(255, 255, 255),
+                 -1px -1px 0 rgb(255, 255, 255);
 }
 
 #actorContainer {
@@ -118,13 +166,15 @@ img {
     padding: 25px;
     width: 700px;
     flex-wrap: wrap;
+    justify-content: center;
 
     background-color: white;
 }
 
 .actor-card {
-    background-color: turquoise;
-    width: 300px;
+    background-color:#00b3ad;
+    border-color: #06928d;
+    width: 175px;
     margin: 20px; 
     display: flex;
     flex-direction: column;
@@ -133,6 +183,9 @@ img {
     border-radius: 12px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
 }
 
 .nomsContainer {
@@ -150,8 +203,8 @@ img {
 
 .btns-container > button {
     padding: 2px 10px;
-    background-color: rgb(215, 146, 16);
-    border-color: rgb(168, 109, 0);
+    background-color:#fed653;
+    border-color:#fec60f;
 
     text-align: center;
     font-family: 'Marker Felt', fantasy;
@@ -159,9 +212,9 @@ img {
     font-weight: bold;
     font-size:15px;
     text-shadow: -1px 1px 0 #000,
-    1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px -1px 0 #000;
+                 1px 1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px -1px 0 #000;
   
 }
 
@@ -177,6 +230,9 @@ img {
 #actorBtns > button {
     background-image: url('https://scontent.flas1-2.fna.fbcdn.net/v/t39.30808-6/341730943_988730692291098_421112120266179697_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0debeb&_nc_ohc=siC1fbaU-kcAX_IAqGU&_nc_ht=scontent.flas1-2.fna&oh=00_AfA5CuXU9D9TtwwGcW7MgU6pIo4kNGtrGYrexrJdFwsZnQ&oe=644558B3')!important;
     background-size: cover;
+    border-width: medium;
+    border-color:#00b3ad;
+    border-style: double;
     padding: 0px;
     height: 55px;
     width: 85px;
@@ -194,12 +250,26 @@ img {
                  -1px -1px 0 #000;
 }
 
-.actor-card {
-    width: 150px;
-
-}
 
 .actor-card-img {
     max-width: fit-content;
+}
 
+#winnerPTag {
+    color:#00b3ad;
+    font-family: 'Marker Felt', fantasy;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:20px;
+    letter-spacing: 1px;
+    text-shadow: -1px 1px 0 #000,
+                 1px 1px 0 #000,
+                 1px -1px 0 #000,
+                 -1px -1px 0 #000;
+}
+
+#winnerDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

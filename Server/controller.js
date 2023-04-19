@@ -1,6 +1,6 @@
 let actors = require('./db.json')
 let globalID = 22;
-let winnerArr = ['Who\'s actually surprised?', 'I\'m shocked! This is so unexpected!!!', 'He probably has a great personality, too.']
+let winnerArr = ['Who\'s actually surprised?', 'I\'m shocked! This is so unexpected!', 'He probably has a great personality, too.', 'I heard he\'s also a family man.', 'You did it! Congratualations! World\'s best actor!']
 
 module.exports = {
     getRandomActor: (req, res) => {
