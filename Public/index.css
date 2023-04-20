@@ -139,7 +139,7 @@ img {
     display: flex;
     box-sizing: border-box;
 
-    background-color:#09b69c;
+    background-color:#5fc6c2;
     border-color:#016b67;
     border-style: double;
     border-width: medium;
@@ -151,6 +151,7 @@ img {
     padding: 0px;
 
     color: rgb(0, 0, 0);
+    font-size: 20px;
     font-family: 'Marker Felt', fantasy;
     text-align: center;
     align-items: center;
@@ -178,7 +179,7 @@ img {
     margin: 20px; 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     border-radius: 12px;
     border-top-left-radius: 15px;
@@ -215,6 +216,7 @@ img {
                  1px 1px 0 #000,
                  1px -1px 0 #000,
                  -1px -1px 0 #000;
+
   
 }
 
